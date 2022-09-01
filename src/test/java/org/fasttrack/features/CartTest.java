@@ -30,6 +30,8 @@ public class CartTest extends BaseTest {
 
         cartSteps.checkSubtotalMatches();
 
+        cartSteps.checkTotalCartPriceMatches();
+
 
 
 

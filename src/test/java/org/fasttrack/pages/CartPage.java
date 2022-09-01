@@ -15,6 +15,12 @@ public class CartPage extends BasePage {
     @FindBy (css = "tbody tr:first-child .a-right .price")
     private WebElementFacade subtotalCartPrice;
 
+    @FindBy(css = "tbody tr:last-child .a-right .price")
+    private WebElementFacade taxCartPrice;
+
+    @FindBy(css = "tfoot .price")
+    private WebElementFacade totalPriceCart;
+
     public String getSuccessMessage() {
         return successMessage.getText();
     }
@@ -30,5 +36,13 @@ public class CartPage extends BasePage {
         int expected = getSubtotalProducts();
         int actual = convertStringToInteger(subtotalCartPrice.getText());
         return expected == actual;
+    }
+    public boolean checkIfTotalPriceMatches(){
+        int subtotal = getSubtotalProducts();
+        int tax = convertStringToInteger(taxCartPrice.getText());
+        int expectedTotal = subtotal + tax;
+        int actualTotal = convertStringToInteger(totalPriceCart.getText());
+
+        return expectedTotal == actualTotal;
     }
 }

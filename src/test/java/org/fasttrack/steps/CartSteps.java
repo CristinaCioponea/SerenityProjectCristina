@@ -22,4 +22,8 @@ public class CartSteps extends BaseSteps {
     public void checkSubtotalMatches() {
         Assert.assertTrue(cartPage.chechIfSubtotalMatches());
     }
+    @Step
+    public void checkTotalCartPriceMatches(){
+        Assert.assertTrue(cartPage.checkIfTotalPriceMatches());
+    }
 }
