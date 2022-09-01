@@ -6,7 +6,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 import java.util.List;
 
-public class SearchResultsPage extends PageObject {
+public class SearchResultsPage extends BasePage {
 
     @FindBy(css = ".category-products .item .product-name a")
     private List<WebElementFacade> listOfProductNames;
