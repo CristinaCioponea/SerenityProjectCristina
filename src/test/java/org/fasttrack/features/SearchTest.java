@@ -20,4 +20,13 @@ public class SearchTest extends BaseTest{
         searchSteps.findProductWithNameInListAndOpen("FRENCH CUFF COTTON TWILL OXFORD");
 
     }
+    @Test
+    public void loginAndSearchForProductNameThirdTest(){
+        loginSteps.doLogin(Constants.userEmail,Constants.userPass);
+        searchSteps.searchForKeyword("bag");
+        searchSteps.findProductWithNameInListAndOpen("LARGE CAMERA BAG");
+
+
+
+    }
 }
