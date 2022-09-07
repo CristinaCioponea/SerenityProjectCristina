@@ -19,10 +19,8 @@ public class BaseTest {
 
     @Steps
     protected LoginSteps loginSteps;
-    @Steps
-    protected SearchSteps searchSteps;
-    @Steps
-    protected CartSteps cartSteps;
+
+
 
 
     @Before

@@ -28,4 +28,16 @@ public class LoginSteps extends BaseSteps {
     public void clickLogin(){
         loginPage.clickLoginButton();
     }
+    @Step
+    public void verifyUserisLoggedIn(){
+        Assert.assertEquals("jula.cristina", accountPage.getWelcomeText());
+    }
+    @Step
+    public void doLogin(String email, String pass){
+        navigateToLoginPage();
+        setUserEmail(Constants.userEmail);
+        setPassword(Constants.userPass);
+        clickLogin();
+    }
+
 }
