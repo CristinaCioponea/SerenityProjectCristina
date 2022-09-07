@@ -23,12 +23,11 @@ public class BaseTest {
     protected SearchSteps searchSteps;
     @Steps
     protected CartSteps cartSteps;
-    @Steps
-    protected CheckoutSteps checkoutSteps;
+
 
     @Before
     public void init(){
         driver.manage().window().maximize();
-        driver.get("http://testfasttrackit.info/selenium-test");
+        driver.get("http://qa1.fasttrackit.org:8008/");
     }
 }

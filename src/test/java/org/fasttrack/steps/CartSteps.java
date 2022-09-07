@@ -8,22 +8,5 @@ import java.util.Locale;
 
 public class CartSteps extends BaseSteps {
 
-    @Step
-    public void addProductToCart() {
-        productPage.clickAddToCartButton();
     }
 
-    @Step
-    public void checkMessageSuccess(String productName) {
-        Assert.assertEquals(productName.toLowerCase() + " was added to your shopping cart.".toLowerCase(), cartPage.getSuccessMessage().toLowerCase());
-    }
-
-    @Step
-    public void checkSubtotalMatches() {
-        Assert.assertTrue(cartPage.chechIfSubtotalMatches());
-    }
-    @Step
-    public void checkTotalCartPriceMatches(){
-        Assert.assertTrue(cartPage.checkIfTotalPriceMatches());
-    }
-}

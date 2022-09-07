@@ -6,10 +6,4 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 public class AccountPage extends BasePage {
 
-    @FindBy(css = ".welcome-msg strong")
-    private WebElementFacade welcomeTextElement;
-
-    public String getWelcomeText() {
-        return welcomeTextElement.getText();
-    }
 }
