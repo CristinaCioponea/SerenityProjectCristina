@@ -16,6 +16,7 @@ public class HomePage extends BasePage {
     private WebElementFacade loginLink;
 
 
+
     public void clickAccountLink() {
         clickOn(accountLink);
     }

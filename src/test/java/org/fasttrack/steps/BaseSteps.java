@@ -10,6 +10,7 @@ public class BaseSteps extends ScenarioSteps {
     protected LoginPage loginPage;
 
     protected AccountPage accountPage;
+    protected ShopPage shopPage;
 
 
 }

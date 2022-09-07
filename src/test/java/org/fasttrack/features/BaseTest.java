@@ -20,9 +20,6 @@ public class BaseTest {
     @Steps
     protected LoginSteps loginSteps;
 
-
-
-
     @Before
     public void init(){
         driver.manage().window().maximize();
