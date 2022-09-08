@@ -3,10 +3,7 @@ package org.fasttrack.features;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
-import org.fasttrack.steps.CartSteps;
-import org.fasttrack.steps.CheckoutSteps;
-import org.fasttrack.steps.LoginSteps;
-import org.fasttrack.steps.SearchSteps;
+import org.fasttrack.steps.*;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +16,11 @@ public class BaseTest {
 
     @Steps
     protected LoginSteps loginSteps;
+    @Steps
+    protected ShopSteps shopSteps;
+    @Steps
+    protected SearchSteps searchSteps;
+
 
     @Before
     public void init(){
