@@ -25,11 +25,17 @@ public class BaseTest {
     protected CartSteps cartSteps;
 
 
-
-
     @Before
-    public void init(){
+    public void init() {
         driver.manage().window().maximize();
         driver.get("http://qa1.fasttrackit.org:8008/");
+
     }
+
+
 }
+
+
+
+
+
