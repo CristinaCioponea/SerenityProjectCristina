@@ -13,5 +13,9 @@ public class BaseSteps extends ScenarioSteps {
     protected ShopPage shopPage;
     protected SearchResultsPage searchResultsPage;
 
+    protected ProductPage productPage;
+
+    protected CartPage cartPage;
+
 
 }

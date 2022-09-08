@@ -3,6 +3,7 @@ package org.fasttrack.features;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import org.fasttrack.pages.CartPage;
 import org.fasttrack.steps.*;
 import org.junit.Before;
 import org.junit.runner.RunWith;
@@ -20,6 +21,10 @@ public class BaseTest {
     protected ShopSteps shopSteps;
     @Steps
     protected SearchSteps searchSteps;
+    @Steps
+    protected CartSteps cartSteps;
+
+
 
 
     @Before

@@ -20,6 +20,7 @@ public class HomePage extends BasePage {
     private WebElementFacade searchField;
 
 
+
     public void clickAccountLink() {
         clickOn(accountLink);
     }
