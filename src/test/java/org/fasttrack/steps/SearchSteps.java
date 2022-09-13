@@ -9,37 +9,27 @@ public class SearchSteps extends BaseSteps {
         homePage.setSearchField(keyword);
         homePage.enter(keyword);
     }
-
     @Step
     public void findProductInAListAndOpen(String productName) {
         Assert.assertTrue(searchResultsPage.findProductInListAndOpen(productName));
     }
-
+    @Step
     public void navigateToProductName(String productName) {
-        searchForKeyword(productName);
-        findProductInListAndOpen(productName);
+        homePage.setSearchField(productName + "\n");
     }
-
     @Step
     public void findProductInListAndOpen(String productName) {
         Assert.assertTrue(searchResultsPage.findProductInListAndOpen(productName));
     }
-
-    @Step
-    public void searchProductAndEnter(String productName){
-        Assert.assertEquals(searchResultsPage.searchProductAndEnter(productName));
-    }
-
     @Step
     public void navigateToProductNameInList(String productName) {
         searchForKeyword(productName);
         findProductInListAndOpen(productName);
     }
-
-//    //@Step
-//    //public void clickProductSearched(){
-//        clickProductSearched();
-//    }
+    @Step
+    public void clickProductSearched(){
+        searchResultsPage.clickProductSearched();
+    }
 }
 
 

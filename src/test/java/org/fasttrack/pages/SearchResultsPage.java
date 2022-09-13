@@ -9,9 +9,10 @@ public class SearchResultsPage extends BasePage {
     @FindBy(css = ".entry-title")
     private List<WebElementFacade> listOfProductsName;
 
-    public SearchResultsPage(WebElementFacade searchAndEnter) {
-        this.searchAndEnter = searchAndEnter;
-    }
+
+    @FindBy(css = ".entry-title a")
+    private WebElementFacade selectProductSearched;
+
 
     public boolean findProductInListAndOpen(String productName){
         for (WebElementFacade element: listOfProductsName){
@@ -24,23 +25,10 @@ public class SearchResultsPage extends BasePage {
         return true;
     }
 
-    @FindBy(css = ".search-field")
-    private WebElementFacade searchAndEnter;
-
-    public boolean searchProductAndEnter(String productName){
-        for (WebElementFacade element: searchAndEnter){
-            if(element.getText().equalsIgnoreCase(productName)){
-                element.typeAndEnter(productName);
-            }
-        }
-        return false;
-    }
-
-    @FindBy(css = ".entry-title a")
-    private WebElementFacade productSearched;
 
     public void clickProductSearched(){
-        clickOn(productSearched);
+        clickOn(selectProductSearched);
+
     }
 }
 

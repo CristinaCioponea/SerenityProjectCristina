@@ -7,22 +7,16 @@ public class CartTest extends BaseTest {
     @Test
     public void loginAndAddToCartTest() {
         loginSteps.doLogin(Constants.userEmail, Constants.userPass);
-//        searchSteps.navigateToProductName("Cap");
-        searchSteps.searchProductAndEnter("Cap");
-
-
-
-//        searchSteps.clickProductSearched();
-
-
+        searchSteps.navigateToProductName("Cap");
+        searchSteps.clickProductSearched();
+        cartSteps.addToCartAProduct();
+        cartSteps.checkSuccessMessage("Cap");
 
 
 
     }
-    //
-//        searchSteps.findProductInListAndOpen("Cap");
-        //cartSteps.addToCartAProduct();
-        //cartSteps.checkSuccessMessage("Cap");
+
+
 
     }
 

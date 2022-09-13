@@ -14,7 +14,8 @@ public class CartSteps extends BaseSteps {
     }
    @Step
     public void checkSuccessMessage(String productName){
-        Assert.assertEquals(productName + "has been added to your cart.", cartPage.getSuccessMessage());
+        Assert.assertEquals("View cart\n" +
+                productName + " " + "has been added to your cart.", cartPage.getSuccessMessage());
 
    }
 
