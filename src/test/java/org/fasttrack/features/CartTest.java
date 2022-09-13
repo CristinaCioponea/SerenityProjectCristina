@@ -10,9 +10,18 @@ public class CartTest extends BaseTest {
         searchSteps.navigateToProductName("Cap");
         searchSteps.clickProductSearched();
         cartSteps.addToCartAProduct();
-        cartSteps.checkSuccessMessage("Cap");
+//        cartSteps.checkSuccessMessage("Cap");
+    }
 
-
+    @Test
+    public void loginAndAddTwoProductsToCartTest(){
+        loginSteps.doLogin(Constants.userEmail, Constants.userPass);
+        searchSteps.navigateToProductName("Beanie");
+        searchSteps.clickProductSearched();
+        cartSteps.addToCartAProduct();
+        searchSteps.navigateToProductName("Cap");
+        searchSteps.clickProductSearched();
+        cartSteps.addToCartAProduct();
 
     }
 
