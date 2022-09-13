@@ -16,9 +16,6 @@ public class LoginPage extends BasePage {
     private WebElementFacade loginButton;
 
 
-
-
-
     public void setEmailField(String value) {
         typeInto(emailField, value);
     }
