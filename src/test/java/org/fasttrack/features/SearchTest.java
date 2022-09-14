@@ -17,8 +17,14 @@ public class SearchTest extends BaseTest {
         loginSteps.doLogin(Constants.userEmail, Constants.userPass);
         shopSteps.navigateToShopPage();
         searchSteps.searchForKeyword("2");
-
-
     }
+
+    @Test
+    public void loginAndSearchForCredentialsProductNameTest() {
+        loginSteps.doLogin(Constants.userEmail, Constants.userPass);
+        shopSteps.navigateToShopPage();
+        searchSteps.searchForKeyword("Beanie");
+    }
+
 
 }

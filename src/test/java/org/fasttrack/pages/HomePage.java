@@ -19,6 +19,9 @@ public class HomePage extends BasePage {
     @FindBy(css = ".search-field")
     private WebElementFacade searchField;
 
+    @FindBy(css = ".u-column2 h2")
+    private WebElementFacade registerLink;
+
 
 
     public void clickAccountLink() {
@@ -31,6 +34,10 @@ public class HomePage extends BasePage {
 
     public void setSearchField(String value) {
         typeInto(searchField, value);
+    }
+
+    public void clickRegisterLink(){
+        clickOn(registerLink);
     }
 
 }

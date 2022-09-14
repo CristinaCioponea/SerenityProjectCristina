@@ -23,6 +23,8 @@ public class BaseTest {
     protected SearchSteps searchSteps;
     @Steps
     protected CartSteps cartSteps;
+    @Steps
+    protected RegisterSteps registerSteps;
 
 
     @Before
