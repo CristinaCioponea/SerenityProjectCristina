@@ -12,7 +12,6 @@ public class CartTest extends BaseTest {
         cartSteps.addToCartAProduct();
 //        cartSteps.checkSuccessMessage("Cap");
     }
-
     @Test
     public void loginAndAddTwoProductsToCartTest(){
         loginSteps.doLogin(Constants.userEmail, Constants.userPass);
@@ -22,8 +21,26 @@ public class CartTest extends BaseTest {
         searchSteps.navigateToProductName("Cap");
         searchSteps.clickProductSearched();
         cartSteps.addToCartAProduct();
+    }
+    @Test
+    public void verifySubtotalCartPricesTest(){
+        loginSteps.doLogin(Constants.userEmail, Constants.userPass);
+
+        cartSteps.removeCartProducts();
+        searchSteps.navigateToProductName("Beanie");
+        searchSteps.clickProductSearched();
+        cartSteps.addToCartAProduct();
+        searchSteps.navigateToProductName("Cap");
+        searchSteps.clickProductSearched();
+        cartSteps.addToCartAProduct();
+        cartSteps.navigateToCartPage();
+//        cartSteps.verifySubtotalMatches();
 
     }
+
+
+
+
 
 
 

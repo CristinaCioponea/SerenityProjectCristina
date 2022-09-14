@@ -22,6 +22,9 @@ public class HomePage extends BasePage {
     @FindBy(css = ".u-column2 h2")
     private WebElementFacade registerLink;
 
+    @FindBy(id = "menu-item-59")
+    private WebElementFacade cartLink;
+
 
 
     public void clickAccountLink() {
@@ -38,6 +41,9 @@ public class HomePage extends BasePage {
 
     public void clickRegisterLink(){
         clickOn(registerLink);
+    }
+    public void clickCartLink(){
+        clickOn(cartLink);
     }
 
 }
