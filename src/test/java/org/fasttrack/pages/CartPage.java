@@ -16,8 +16,17 @@ public class CartPage extends BasePage {
     @FindBy(css = ".cart-subtotal .woocommerce-Price-amount")
     private WebElementFacade subtotalCartPrice;
 
+    @FindBy(css = ".cart-contents .woocommerce-Price-amount")
+    private WebElementFacade cartButton;
+
     @FindBy(css = "td.product-remove")
-    private WebElementFacade removeProduct;
+    private WebElementFacade removeProductButton;
+
+    @FindBy(css = ".return-to-shop .button")
+    private WebElementFacade emptyReturnCartButton;
+
+    @FindBy(css = "Update cart")
+    private WebElementFacade updateCartButton;
 
 
     public String getSuccessMessage() {
@@ -37,9 +46,19 @@ public class CartPage extends BasePage {
         return expected == actual;
     }
 
-    public void clickRemoveProduct(){
-        clickOn(removeProduct);
+    public void clickCartButton(){
+        clickOn(cartButton);
+    }
 
+    public void clickRemoveProductButton(){
+        clickOn(removeProductButton);
+    }
+    public void clickReturnToCartButton(){
+        clickOn(emptyReturnCartButton);
+    }
+
+    public void clickUpdateCartButton(){
+        clickOn(updateCartButton);
     }
 
         }

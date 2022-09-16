@@ -24,9 +24,6 @@ public class CartTest extends BaseTest {
     }
     @Test
     public void verifySubtotalCartPricesTest(){
-        loginSteps.doLogin(Constants.userEmail, Constants.userPass);
-
-        cartSteps.removeCartProducts();
         searchSteps.navigateToProductName("Beanie");
         searchSteps.clickProductSearched();
         cartSteps.addToCartAProduct();
@@ -34,8 +31,13 @@ public class CartTest extends BaseTest {
         searchSteps.clickProductSearched();
         cartSteps.addToCartAProduct();
         cartSteps.navigateToCartPage();
-//        cartSteps.verifySubtotalMatches();
+        cartSteps.verifySubtotalMatches();
+    }
 
+    @Test
+    public void emptyCartTest(){
+        loginSteps.doLogin(Constants.userEmail, Constants.userPass);
+        cartSteps.removeCartProducts();
     }
 
 

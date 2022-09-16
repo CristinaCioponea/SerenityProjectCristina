@@ -27,8 +27,11 @@ public class CartSteps extends BaseSteps {
    }
    @Step
     public void removeCartProducts(){
-        cartPage.clickRemoveProduct();
+        cartPage.clickCartButton();
+        cartPage.clickRemoveProductButton();
+//        cartPage.clickReturnToCartButton();
    }
+
 
     }
 
