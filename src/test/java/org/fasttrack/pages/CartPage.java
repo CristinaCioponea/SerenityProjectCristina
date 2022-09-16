@@ -28,6 +28,9 @@ public class CartPage extends BasePage {
     @FindBy(css = "Update cart")
     private WebElementFacade updateCartButton;
 
+    @FindBy(css = ".checkout-button")
+    private WebElementFacade checkoutButton;
+
 
     public String getSuccessMessage() {
         return successMessage.getText();
@@ -59,6 +62,9 @@ public class CartPage extends BasePage {
 
     public void clickUpdateCartButton(){
         clickOn(updateCartButton);
+    }
+    public void clickCheckoutButton(){
+        clickOn(checkoutButton);
     }
 
         }

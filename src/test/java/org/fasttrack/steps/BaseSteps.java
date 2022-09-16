@@ -15,6 +15,8 @@ public class BaseSteps extends ScenarioSteps {
 
     protected ProductPage productPage;
 
+    protected CheckoutPage checkoutPage;
+
     protected CartPage cartPage;
 
     protected RegisterPage registerPage;
