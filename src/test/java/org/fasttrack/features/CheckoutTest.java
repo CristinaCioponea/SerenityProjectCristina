@@ -12,11 +12,10 @@ public class CheckoutTest extends BaseTest{
         searchSteps.navigateToProductName("Cap");
         searchSteps.clickProductSearched();
         cartSteps.addToCartAProduct();
-
+        cartSteps.navigateToCartPage();
         checkoutSteps.navigateToCheckoutPage();
         checkoutSteps.setFirstNameBill("Cioponea");
         checkoutSteps.setLastNameBill("Cristina");
-        checkoutSteps.setCountryBill("Romania");
         checkoutSteps.setStreetAddressBill("Decembrie");
         checkoutSteps.setCityBill("Cluj");
         checkoutSteps.setPostcodeBill("335200");
