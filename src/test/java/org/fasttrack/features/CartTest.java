@@ -46,6 +46,16 @@ public class CartTest extends BaseTest {
     @Test
     public void emptyCartTest(){
         loginSteps.doLogin(Constants.userEmail, Constants.userPass);
+        searchSteps.navigateToProductName("Hoodie with Zipper");
+        searchSteps.clickProductSearched();
+        cartSteps.addToCartAProduct();
+        searchSteps.navigateToProductName("Tricicleta");
+        searchSteps.clickProductSearched();
+        cartSteps.addToCartAProduct();
+        searchSteps.navigateToProductName("J5OFVylYuB");
+        searchSteps.clickProductSearched();
+        cartSteps.addToCartAProduct();
+        cartSteps.navigateToCartPage();
         cartSteps.removeCartProducts();
     }
 

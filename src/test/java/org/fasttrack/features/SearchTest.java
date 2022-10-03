@@ -26,5 +26,14 @@ public class SearchTest extends BaseTest {
         searchSteps.searchForKeyword("Beanie");
     }
 
+    @Test
+    public void searchForAProductTest(){
+        shopSteps.navigateToShopPage();
+        searchSteps.navigateToProductName("Album");
+        searchSteps.clickProductSearched();
+
+
+    }
+
 
 }
