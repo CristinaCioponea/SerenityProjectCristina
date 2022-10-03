@@ -33,7 +33,7 @@ public class CartPage extends BasePage {
 
 
     public String getSuccessMessage() {
-        return successMessage.getText();
+        return successMessage.getText().replace("View cart\n", "");
     }
 
     public int getSubtotalProducts() {

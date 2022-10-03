@@ -17,7 +17,7 @@ public class SearchResultsPage extends BasePage {
     public boolean findProductInListAndOpen(String productName){
         for (WebElementFacade element: listOfProductsName){
             if (element.getText().equalsIgnoreCase(productName)){
-                element.typeAndEnter(productName);
+                element.click();
                 return false;
             }
         }

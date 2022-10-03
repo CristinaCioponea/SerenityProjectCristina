@@ -9,7 +9,7 @@ public class CheckoutTest extends BaseTest{
         searchSteps.navigateToProductName("Beanie");
         searchSteps.clickProductSearched();
         cartSteps.addToCartAProduct();
-        searchSteps.navigateToProductName("Cap");
+        searchSteps.navigateToProductName("Z6iJo");
         searchSteps.clickProductSearched();
         cartSteps.addToCartAProduct();
         cartSteps.navigateToCartPage();

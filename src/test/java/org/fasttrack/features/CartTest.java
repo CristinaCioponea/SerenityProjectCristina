@@ -5,6 +5,15 @@ import org.junit.Test;
 
 public class CartTest extends BaseTest {
     @Test
+    public void AddToCartTest(){
+        searchSteps.navigateToProductName("Cap");
+        searchSteps.clickProductSearched();
+        cartSteps.addToCartAProduct();
+        cartSteps.checkSuccessMessage("Cap");
+       
+    }
+
+    @Test
     public void loginAndAddToCartTest() {
         loginSteps.doLogin(Constants.userEmail, Constants.userPass);
         searchSteps.navigateToProductName("Album");
