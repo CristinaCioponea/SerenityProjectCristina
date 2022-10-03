@@ -6,11 +6,11 @@ import org.junit.Test;
 public class CartTest extends BaseTest {
     @Test
     public void AddToCartTest(){
-        searchSteps.navigateToProductName("Cap");
+        searchSteps.navigateToProductName("Tricicleta");
         searchSteps.clickProductSearched();
         cartSteps.addToCartAProduct();
-        cartSteps.checkSuccessMessage("Cap");
-       
+        cartSteps.checkSuccessMessage("Tricicleta");
+
     }
 
     @Test
@@ -19,7 +19,7 @@ public class CartTest extends BaseTest {
         searchSteps.navigateToProductName("Album");
         searchSteps.clickProductSearched();
         cartSteps.addToCartAProduct();
-//        cartSteps.checkSuccessMessage("Cap");
+        cartSteps.checkSuccessMessage("Album");
     }
     @Test
     public void loginAndAddTwoProductsToCartTest(){

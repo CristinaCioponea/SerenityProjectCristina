@@ -12,8 +12,11 @@ public class CartSteps extends BaseSteps {
     }
    @Step
     public void checkSuccessMessage(String productName){
-        String expected = "”"+productName+"” has been added to your cart.";
-        String actual = cartPage.getSuccessMessage();
+       String expected = productName + " has been added to your cart.";
+       String actual = cartPage.getSuccessMessage().replaceAll("[^a-zA-Z0-9 .-]", "");
+
+       System.out.println(expected);
+       System.out.println(actual);
         Assert.assertEquals(expected, actual);
    }
    @Step
